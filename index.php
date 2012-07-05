@@ -1,5 +1,4 @@
 <?php
-	// vim: tabstop=3 :
 
 	// always required doctype
 	$DOCTYPE = '<?xml version="1.0" encoding="UTF-8"?>';
@@ -7,15 +6,39 @@
 
 	// config section
 
-	/*
-		a few assumptions are made here:
-			* a domain has always the same server for IMAP and SMTP (this might need to be changed some day)
-			* if smtp_port and imap_port are not defined use 993 for IMAP and 25 for SMTP
-			* if smtp_ssl and imap_ssl are not defined use SSL for IMAP and TLS for SMTP
-			* if username_format is undefined use only localpart (%EMAILLOCALPART%)
+	/* some assumptions are made here:
+		* a domain has always the same server for IMAP and SMTP (this might need to be changed some day)
+		* if smtp_port and imap_port are not defined use 993 for IMAP and 25 for SMTP
+		* if smtp_ssl and imap_ssl are not defined use SSL for IMAP and TLS for SMTP
+		* if username_format is undefined use only localpart (%EMAILLOCALPART%)
 	*/
 
-	$domains["ak-online.be"]["server"] = "debs.ak-online.be";
+	$domains["ak-online.be"]["server"]	= "debs.ak-online.be";
+	$domains["ak-online.net"]["server"]	= "debs.ak-online.be";
+
+	$domains["barf4all.de"]["server"]	= "mia.ak-online.be";
+	$domains["barf4all.de"]["username_format"]	= "%EMAILADDRESS%";
+	
+	$domains["brauerschranksysteme.de"]["server"]	= "mia.ak-online.be";
+	$domains["brauerschranksysteme.de"]["server"]	= "%EMAILADDRESS%";
+
+	$domains["feinkost-heyn.de"]["server"]	= "mia.ak-online.be";
+	$domains["feinkost-heyn.de"]["server"]	= "%EMAILADDRESS%";
+
+	$domains["hsh-online.com"]["server"]	= "katja.ak-online.be";
+
+	$domains["janine-grosse.de"]["server"]	= "mia.ak-online.be";
+	$domains["janine-grosse.de"]["server"]	= "%EMAILADDRESS%";
+
+	$domains["mia.ak-online.be"]["server"]	= "mia.ak-online.be";
+	$domains["mia.ak-online.be"]["server"]	= "%EMAILADDRESS%";
+
+	$domains["saori-chan.de"]["server"]	= "mia.ak-online.be";
+	$domains["saori-chan.de"]["server"]	= "%EMAILADDRESS%";
+
+	$domains["vadaru.com"]["server"]	= "mia.ak-online.be";
+	$domains["vadaru.com"]["server"]	= "%EMAILADDRESS%";
+
 
 	// do matching and output correct config-file
 
@@ -63,30 +86,4 @@
 		header("HTTP/1.0 404 Not Found", 404 );
 		exit;
 	}
-	/*
-<clientConfig version="1.1">
-  <emailProvider id="ak-online.be">
-    <domain>ak-online.be</domain>
-    <displayName>AK-ONLINE Mail</displayName>
-    <displayShortName>ak-online.be</displayShortName>
-
-    <incomingServer type="imap">
-      <hostname>debs.ak-online.be</hostname>
-      <port>993</port>
-      <socketType>SSL</socketType>
-      <authentication>password-cleartext</authentication>
-      <username>%EMAILLOCALPART%</username>
-    </incomingServer>
-
-    <outgoingServer type="smtp">
-      <hostname>debs.ak-online.be</hostname>
-      <port>465</port>
-      <socketType>SSL</socketType>
-      <authentication>password-cleartext</authentication>
-      <username>%EMAILLOCALPART%</username>
-    </outgoingServer>
-
-  </emailProvider>
-</clientConfig>
-	*/
 ?>
