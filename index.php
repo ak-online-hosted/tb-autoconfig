@@ -48,7 +48,7 @@
 			$result .= "\n";
 			$result .= "    <outgoingServer type=\"smtp\">\n";
 			$result .= "      <hostname>".$server."</hostname>\n";
-			$result .= "      <port><".$smtp_port."</port>\n";
+			$result .= "      <port>".$smtp_port."</port>\n";
 			$result .= "      <socketType>".$smtp_ssl."</socketType>\n";
 			$result .= "      <authentication>password-cleartext</authentication>\n";
 			$result .= "      <username>".$username_format."</username>\n";
