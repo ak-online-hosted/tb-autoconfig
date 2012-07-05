@@ -21,6 +21,30 @@
 	if ( preg_match ( "/autoconfig.(.*)$/" , $_SERVER["SERVER_NAME"] , $matches ) > 0 ) {
 		$domain = $matches[1];
 
+		$result .= "<clientConfig version=\"1.1\">\n";
+		$result .= "  <emailProvider id=\"ak-online.be\">\n";
+		$result .= "    <domain>ak-online.be</domain>\n";
+		$result .= "    <displayName>AK-ONLINE Mail</displayName>\n";
+		$result .= "    <displayShortName>ak-online.be</displayShortName>\n";
+		$result .= "\n";
+		$result .= "    <incomingServer type=\"imap\">\n";
+		$result .= "      <hostname>debs.ak-online.be</hostname>\n";
+		$result .= "      <port>993</port>\n";
+		$result .= "      <socketType>SSL</socketType>\n";
+		$result .= "      <authentication>password-cleartext</authentication>\n";
+		$result .= "      <username>%EMAILLOCALPART%</username>\n";
+		$result .= "    </incomingServer>\n";
+		$result .= "\n";
+		$result .= "    <outgoingServer type=\"smtp\">\n";
+		$result .= "      <hostname>debs.ak-online.be</hostname>\n";
+		$result .= "      <port>465</port>\n";
+		$result .= "      <socketType>SSL</socketType>\n";
+		$result .= "      <authentication>password-cleartext</authentication>\n";
+		$result .= "      <username>%EMAILLOCALPART%</username>\n";
+		$result .= "    </outgoingServer>\n";
+		$result .= "\n";
+		$result .= "  </emailProvider>\n";
+		$result .= "</clientConfig>\n";
 
 		echo $result;
 
@@ -43,14 +67,6 @@
       <username>%EMAILLOCALPART%</username>
     </incomingServer>
 
-    <incomingServer type="imap">
-      <hostname>debs.ak-online.be</hostname>
-      <port>143</port>
-      <socketType>STARTTLS</socketType>
-      <authentication>password-cleartext</authentication>
-      <username>%EMAILLOCALPART%</username>
-    </incomingServer>
-
     <outgoingServer type="smtp">
       <hostname>debs.ak-online.be</hostname>
       <port>465</port>
@@ -59,18 +75,6 @@
       <username>%EMAILLOCALPART%</username>
     </outgoingServer>
 
-    <outgoingServer type="smtp">
-      <hostname>debs.ak-online.be</hostname>
-      <port>587</port>
-      <socketType>STARTTLS</socketType>
-      <authentication>password-cleartext</authentication>
-      <username>%EMAILLOCALPART%</username>
-    </outgoingServer>
-
-    <documentation url="http://ak-online.be/">
-      <descr lang="de">Homepage besuchen</descr>
-      <descr lang="en">Visit homepage</descr>
-    </documentation>
   </emailProvider>
 </clientConfig>
 	*/
