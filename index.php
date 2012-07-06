@@ -86,6 +86,7 @@
 			$result .= "  </emailProvider>\n";
 			$result .= "</clientConfig>\n";
 
+			header ( "Content-Type: text/xml" );
 			echo $result;
 		}
 	} else {
