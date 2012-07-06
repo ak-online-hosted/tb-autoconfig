@@ -18,7 +18,7 @@
 
 	$domains["barf4all.de"]["server"]	= "mia.ak-online.be";
 	$domains["barf4all.de"]["username_format"]	= "%EMAILADDRESS%";
-	
+
 	$domains["brauerschranksysteme.de"]["server"]	= "mia.ak-online.be";
 	$domains["brauerschranksysteme.de"]["username_format"]	= "%EMAILADDRESS%";
 
