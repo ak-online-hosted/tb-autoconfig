@@ -20,27 +20,27 @@
 	$domains["barf4all.de"]["username_format"]	= "%EMAILADDRESS%";
 	
 	$domains["brauerschranksysteme.de"]["server"]	= "mia.ak-online.be";
-	$domains["brauerschranksysteme.de"]["server"]	= "%EMAILADDRESS%";
+	$domains["brauerschranksysteme.de"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["feinkost-heyn.de"]["server"]	= "mia.ak-online.be";
-	$domains["feinkost-heyn.de"]["server"]	= "%EMAILADDRESS%";
+	$domains["feinkost-heyn.de"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["hsh-online.com"]["server"]	= "katja.ak-online.be";
 
 	$domains["janine-grosse.de"]["server"]	= "mia.ak-online.be";
-	$domains["janine-grosse.de"]["server"]	= "%EMAILADDRESS%";
+	$domains["janine-grosse.de"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["mia.ak-online.be"]["server"]	= "mia.ak-online.be";
-	$domains["mia.ak-online.be"]["server"]	= "%EMAILADDRESS%";
+	$domains["mia.ak-online.be"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["pokemonis.net"]["server"]	= "mia.ak-online.be";
-	$domains["pokemonis.net"]["server"]	= "%EMAILADDRESS%";
+	$domains["pokemonis.net"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["saori-chan.de"]["server"]	= "mia.ak-online.be";
-	$domains["saori-chan.de"]["server"]	= "%EMAILADDRESS%";
+	$domains["saori-chan.de"]["username_format"]	= "%EMAILADDRESS%";
 
 	$domains["vadaru.com"]["server"]	= "mia.ak-online.be";
-	$domains["vadaru.com"]["server"]	= "%EMAILADDRESS%";
+	$domains["vadaru.com"]["username_format"]	= "%EMAILADDRESS%";
 
 
 	// do matching and output correct config-file
