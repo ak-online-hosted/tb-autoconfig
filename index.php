@@ -33,6 +33,9 @@
 	$domains["mia.ak-online.be"]["server"]	= "mia.ak-online.be";
 	$domains["mia.ak-online.be"]["server"]	= "%EMAILADDRESS%";
 
+	$domains["pokemonis.net"]["server"]	= "mia.ak-online.be";
+	$domains["pokemonis.net"]["server"]	= "%EMAILADDRESS%";
+
 	$domains["saori-chan.de"]["server"]	= "mia.ak-online.be";
 	$domains["saori-chan.de"]["server"]	= "%EMAILADDRESS%";
 
@@ -47,7 +50,10 @@
 
 		if ( is_array( $domains[$domain] ) ) {
 			$server = isset( $domains[$domain]["server"] ) ? $domains[$domain]["server"] : NULL;
-			if ( $server === NULL ) exit;
+			if ( $server === NULL ) {
+				echo "domain ".$domain." was not found\n";
+				exit;
+			}
 
 			$imap_port = isset( $domains[$domain]["imap_port"] ) ? $domains[$domain]["imap_port"] : "993";
 			$imap_ssl = isset( $domains[$domain]["imap_ssl"] ) ? $domains[$domain]["imap_ssl"] : "SSL";
